@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "Schema for POST requests to /group",
+    "type": "object",
+    "properties": {
+        "label": {
+            "description": "Used to access the group. Must be unique",
+            "type": "string"
+        },
+        "type_string": {
+            "description": "",
+            "type": "string"
+        },
+        "user_id": {
+            "description": "Id of users in the group.",
+            "type": "string"
+        }
+    },
+    "required": [
+      "label",
+      "type_sting",
+      "user_id"
+    ]
+}
