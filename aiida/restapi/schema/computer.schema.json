@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "Schema for POST requests to /computer",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "Used to identify a computer. Must be unique.",
+            "type": "string"
+        },
+        "hostname": {
+            "description": "Label that identifies the computer within the network.",
+            "type": "string"
+        },
+        "scheduler_type": {
+            "description": "Information of the scheduler (and plugin) that the computer uses to manage jobs.",
+            "type": "string"
+        },
+        "transport_type": {
+            "description": "information of the transport (and plugin) required to copy files and communicate to and from the computer.",
+            "type": "string"
+        },
+        "metadata": {
+            "description": "General settings for these communication and management protocols.",
+            "type": "object"
+        }
+    },
+    "required": [
+        "name",
+        "hostname",
+        "scheduler_type",
+        "transport_type"
+    ]
+}
